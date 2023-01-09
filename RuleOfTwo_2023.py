@@ -68,8 +68,7 @@ def Ro2(PCC, threshold ):
         print('Sweep(s) ',ind,' contain(s) non-stationary noise!')
 
 # read the sweep file from the path
-# path = 'path_to_sweep_measurements'
-path = 'C:\\Users\\prawdak1\\Dropbox (Aalto)\\Projects\\AES Ro2 v 2\\'
+path = 'path_to_sweep_measurements'
 filename_signal = 'sweep_file.wav'
 fs, signal_ = scipy.io.wavfile.read(path+filename_signal)
 sw = signal_#/np.max(np.absolute(signal_)) # normalize
