@@ -31,7 +31,7 @@ def calculate_tv_factor(sw, noise, signal_energy):
     En1_n2 = np.zeros((numSweeps, numSweeps))
     Ev1_v2 = np.zeros((numSweeps, numSweeps))
     tau = np.zeros((numSweeps, numSweeps))
-    
+    E_sh = np.zeros( numSweeps)
     
     
     for i  in range(numSweeps):
@@ -86,7 +86,7 @@ numSweeps = dims[1] # number of sweeps in a channel
 
 sw_energy= np.zeros([numSweeps])
 noise_energy = np.zeros([numSweeps])
-E_sh = np.zeros( numSweeps)
+
 
 for i in range(numSweeps):    
     sw_energy[ i] = calculate_energy_mean(sw[:, i])/(len_sweep)
